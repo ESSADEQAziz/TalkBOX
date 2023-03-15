@@ -1,0 +1,118 @@
+body{
+   margin: 0px;
+   background-color: #f2f2f2;
+}
+
+.section_nav1{
+   height: 45px;
+   padding: 10px;
+}
+.section_nav2{
+   height: 45px;
+   padding: 10px;
+}
+ul{
+   margin: 0;
+   display: inline;
+   padding: 0;
+   margin-left: 840px;
+ }
+ li{
+   display: inline-block;
+   text-decoration:underline;
+   margin-right: 20px;
+   font-size: 20px;
+ }
+ li a {
+   color: #616161;
+ }
+#search{
+   margin-left: 60px;
+   width: 435px;
+   border: 0.5px solid black;
+   color: #616161;
+   height: 40px;
+   background-color: white;
+   border-radius: 10px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   font-size: 20px;
+
+}
+#clear_chat{
+   margin-left: 665px;
+   margin-right: 10px;
+   height: 40px;
+   font-size: 20px;
+   background-color: white;
+   border: 0.5px solid black;
+   border-radius: 10px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   color: #616161;
+
+}
+#more{
+   background-color: white;
+   border: 0.5px solid black;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   border-radius: 10px;
+   color: #616161;
+   height: 40px;
+   font-size: 20px;
+   border-radius: 10px;
+}
+
+
+#section_messages{
+   height: 500px;
+   padding: 10px;
+   display: flex;
+   justify-content: space-around;
+
+}
+
+.div_in_3_section{
+   padding: 20px;
+   width: 700px;
+   height: 490px;
+   border-radius: 10px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+
+}
+#PlaceMessages{
+   position: relative;
+   overflow-y: auto;
+   background-color: white;
+   height: 440px;
+   border-radius: 8px;
+   border: 1px solid black;
+}
+#Message{
+   position: absolute;
+   width: auto;
+   margin-top: 20px;
+   font-size: 20px;
+   height: auto;
+   border: 0.5px solid black;
+   padding-left:10px ;
+   padding-right: 10px ;
+}
+#EcrireMessage{
+border-radius: 10px;
+width: 609px;
+font-size: 20px;
+border: 0.5px solid black;
+color: #616161;
+height: 40px;
+}
+#envoyer{
+border-radius: 8px;
+border: 0.5px solid black;
+font-size: 20px;
+height: 40px;
+color: white;
+background-color: #0084ff;
+}
+
+#envoyer:hover{
+   background-color: #0050c8;
+}

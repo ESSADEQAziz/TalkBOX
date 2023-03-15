@@ -1,0 +1,82 @@
+.container{
+    border: 1px solid black;
+    width: 320px;
+    height: 355px;
+    border-radius: 10px;
+    background-image: linear-gradient(gray,white);
+    box-shadow: 2px 2px 3px #333;
+    transition: width 0.5s,height 0.5s , transform 2s;
+    animation-name: example;
+    animation-duration: 4s;
+    position: relative;
+    animation-iteration-count: infinite;
+    /*animation-direction: alternative or reverse*/
+    /*animation-timing-function: ease or linear or ... like the transition timing function*/
+    /*animation-fill-mode: forwards'take the last keyframe biheviors' ..... none'par defaut il retour a ces caracteres principales'*/
+    /*-----------------All in one --------------------*/
+    /*animation: example 5s linear 2s infinite alternate;*/
+   
+}
+@keyframes example {
+    0%   { transform: scale(1,1);box-shadow: 1px 1px 3px #333;}
+    25%  { transform: scale(1.06,1.06);box-shadow: 5px 5px 6px #333;}
+    50%  { transform: scale(1,1);box-shadow: 1px 1px 3px #333;}
+    75%  { transform: scale(1.06,1.06);box-shadow: 5px 5px 6px #333;}
+    100% { transform: scale(1,1);box-shadow: 1px 1px 3px #333;}
+  }
+ 
+.container:hover {
+    box-shadow: 4px 4px 6px #333;
+    width: 340px;
+    height: 365px;
+    animation-name: none;
+    /*transform: rotate(360deg);*/
+    /*transform:translate(20px,20px);*/
+    /*transform:scale(2'two time width',2'two time height')*/
+    /*transform: scaleX(2);*/
+    
+}
+
+
+
+.Login{
+    color:whitesmoke;
+    border: 1px solid #333;
+    border-radius: 10px;
+    margin-top: 10px;
+    background: inherit;
+    text-align: center;
+    outline-width: 0px;
+}
+
+
+#btnLogin{
+        color:inherit ;
+        width: 180px;
+        background: inherit;
+        margin-top: 70px;
+        border-radius: 11px;
+        border: 1px solid #333;
+}
+#btnLogin:hover{
+    box-shadow: 2px 2px 3px black;
+    background-color: rgb(238, 238, 238);
+}
+#btnCreateAccount:hover{
+    box-shadow: 2px 2px 3px black;
+    background-color: rgb(247, 247, 247);
+
+}
+#btnCreateAccount{
+    color:black ;
+    width: 180px;
+    background: inherit;
+    border-radius: 11px;
+    border: 1px solid #333;
+}
+.line{
+    display: inline-block;
+    width: 100px;
+    margin: 0px;
+}
+

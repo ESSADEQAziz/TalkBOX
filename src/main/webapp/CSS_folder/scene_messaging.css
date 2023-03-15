@@ -1,0 +1,174 @@
+body{
+   margin: 0px;
+   background-color: #ebebeb;
+}
+#container_logo_nav1{
+   display: flex;
+   flex-direction: row;
+   height: 60px;
+}
+#logo{
+   width: 80px;
+   height: 60px ;
+}
+
+.section_nav1{
+   height: 40px;
+   padding-top: 25px;
+}
+.section_nav2{
+   height: 45px;
+   padding: 10px;
+}
+
+ul{
+   display: inline;
+   margin-left: 740px; 
+ }
+ li{
+   display: inline-block;
+   text-decoration:underline;
+   margin-right: 15px;
+   font-size: 18px;
+ }
+ li a {
+   color: #616161;
+ }
+#search{
+   margin-left: 30px;
+   width: 435px;
+   border: 0.5px solid black;
+   color: #616161;
+   height: 35px;
+   background-color: white;
+   border-radius: 10px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   font-size: 20px;
+
+}
+#clear_chat{
+   margin-left: 570px;
+   margin-right: 10px;
+   height: 35px;
+   font-size: 20px;
+   background-color: white;
+   border: 0.5px solid black;
+   border-radius: 10px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   color: #616161;
+
+}
+#more{
+   background-color: white;
+   border: 0.5px solid black;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   border-radius: 10px;
+   color: #616161;
+   height: 35px;
+   font-size: 20px;
+   border-radius: 10px;
+}
+
+
+#section_messages{
+   height: 460px;
+   padding: 10px;
+   display: flex;
+   justify-content: space-around;
+
+}
+
+.div_in_3_section{
+   padding: 20px;
+   width: 650px;
+   height: 400px;
+   border-radius: 10px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+
+}
+#PlaceMessages{
+   position: relative;
+   overflow-y: auto;
+   background-color: white;
+   height: 340px;
+   border-radius: 8px;
+   border: 1px solid black;
+}
+#Message{
+   position: absolute;
+   width: auto;
+   margin-top: 20px;
+   font-size: 18px;
+   height: auto;
+   border: 0.5px solid black;
+   padding-left:10px ;
+   padding-right: 10px ;
+}
+#EcrireMessage{
+border-radius: 10px;
+width: 560px;
+font-size: 18px;
+border: 0.5px solid black;
+color: #616161;
+height: 35px;
+}
+#envoyer{
+border-radius: 8px;
+border: 0.5px solid black;
+font-size: 18px;
+height: 35px;
+color: white;
+background-color: #11629c;
+}
+
+#envoyer:hover{
+   background-color: #0084ff;
+}
+
+/**/
+
+
+#user_contacts{
+   overflow-y: auto;
+   
+}
+#contact_container{
+   border: 1px solid #616161;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+   width: 380px;
+   border-radius: 10px;
+   height: 60px;
+   margin-bottom: 5px;
+   display: flex;
+   flex-direction:row;
+   justify-content: space-around;
+}
+#pour_design{
+   display: inline;
+   display: flex;
+   width: 200px;
+   border-color: #ebebeb;
+   flex-direction: column;
+   align-content: space-between;
+}
+#contact_image{
+   width: 60px;
+   height: 60px;
+   border-radius: 50%;
+   
+}
+#contact_name{
+   font-family: 'Courier New', Courier, monospace;
+   border-color: #ebebeb;
+   font-size: larger;
+}
+#contact_status{
+   font-style: italic;
+   border-color: #ebebeb;
+   margin-top: 15px;
+}
+#contact_heure{
+   display: flex;
+   align-items: center;
+   border-color: #ebebeb;
+}
