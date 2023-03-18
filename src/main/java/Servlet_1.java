@@ -1,9 +1,6 @@
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
+import javax.servlet.http.*;
 import java.io.IOException;
 import java.sql.Date;
 import java.sql.Time;
@@ -20,7 +17,51 @@ public class Servlet_1 extends HttpServlet {
         request.setAttribute("account_active",true);
         request.setAttribute("failure_creation",true);
 
-       this.getServletContext().getRequestDispatcher("/JSPs/Login.jsp").forward(request,response);
+        // Si user n'a pas depasser 1 heure apres son log out , on fait login automatiquement par les cookies.
+        Cookie[] cookies = request.getCookies();
+        if (cookies != null) {
+
+            String username=new String();
+            String password=new String();
+            int temp=0;
+
+            for (Cookie cookie : cookies) {
+                if (cookie.getName().equals("cookie_username")) {
+                    username=cookie.getValue();
+                    temp++;
+                }
+                if (cookie.getName().equals("cookie_password")){
+                    password=cookie.getValue();
+                    temp++;
+                }
+            }
+            if (temp == 2){
+                try {
+                    username=Cookies_Methods.decrypt(username);
+                    password=Cookies_Methods.decrypt(password);
+
+                    HttpSession session=request.getSession();
+                    session.setAttribute("session_username",username);
+
+                    request.setAttribute("failure_authentification",false);
+                    request.setAttribute("account_active",true);
+                    request.setAttribute("failure_creation",true);
+
+                    Cookie cookie_username=new Cookie("cookie_username",Cookies_Methods.encrypt(username));
+                    Cookie cookie_password=new Cookie("cookie_password",Cookies_Methods.encrypt(password));
+
+                    cookie_username.setMaxAge(3600); cookie_password.setMaxAge(3600); // unite en seconde
+
+                    this.getServletContext().getRequestDispatcher("/JSPs/scene_messaging.jsp").forward(request,response);
+
+                } catch (Exception e) {
+                    throw new RuntimeException(e);
+                }
+            }else {
+                this.getServletContext().getRequestDispatcher("/JSPs/Login.jsp").forward(request,response);
+            }
+        }
+
     }
 
     @Override
@@ -46,6 +87,19 @@ public class Servlet_1 extends HttpServlet {
                     request.setAttribute("failure_authentification",false);
                     request.setAttribute("account_active",true);
                     request.setAttribute("failure_creation",true);
+
+                    //
+                    try {
+                        Cookie cookie_username=new Cookie("cookie_username",Cookies_Methods.encrypt(username));
+                        Cookie cookie_password=new Cookie("cookie_password",Cookies_Methods.encrypt(password));
+
+                        cookie_username.setMaxAge(3600); cookie_password.setMaxAge(3600); // unite en seconde
+                        response.addCookie(cookie_username);
+                        response.addCookie(cookie_password);
+                    } catch (Exception e) {
+                        throw new RuntimeException(e);
+                    }
+
 
                     this.getServletContext().getRequestDispatcher("/JSPs/scene_messaging.jsp").forward(request,response);
                 }

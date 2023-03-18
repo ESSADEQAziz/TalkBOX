@@ -12,8 +12,8 @@ public class Mail {
 
     public static void EnvoieMail(tuser user){
 
-        String userName="aziz.xfor@gmail.com";
-        String passWord="rhteyftlvicuwuef";
+        String userName="talkbox.chatt@gmail.com";
+        String passWord="bvjzroldowhuqtkn";
 
         //Etape 5.1 Creation de la session :
         Properties prop=new Properties();
